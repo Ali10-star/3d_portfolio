@@ -39,7 +39,7 @@ const Ball = (props) => {
 }
 
 // eslint-disable-next-line react/prop-types
-const BallCanvas = ({ name, icon }) => {
+const BallCanvas = ({ icon }) => {
   return (
     <Canvas
       frameloop='demand'
@@ -48,7 +48,7 @@ const BallCanvas = ({ name, icon }) => {
     >
       <Suspense fallback={<Loader />}>
         <OrbitControls enableZoom={false} />
-        <Ball imgUrl={icon} name={name} />
+        <Ball imgUrl={icon} />
       </Suspense>
       <Preload all />
     </Canvas>

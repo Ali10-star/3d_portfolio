@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { BrowserRouter } from "react-router-dom";
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from './components';
+import { About, Contact, Experience, Hero, Navbar, Tech, Works, StarsCanvas } from './components';
 import { motion } from "framer-motion";
 import { styles } from "./styles";
 import { textVariant } from "./utils/motion";
@@ -20,7 +20,6 @@ const App = () => {
         </motion.div>
         <Tech />
         <Works />
-        <Feedbacks />
         <div className="relative z-0">
           <Contact />
           <StarsCanvas />

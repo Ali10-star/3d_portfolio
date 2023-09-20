@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { styles } from '../styles'
 import { navLinks } from '../constants';
-import { a_logo, menu, close } from '../assets';
+import { a_logo, menu, close, cv } from '../assets';
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -33,9 +33,15 @@ const Navbar = () => {
                 : 'text-secondary'
               } hover:text-white text-[18px] font-medium cursor-pointer transition ease-in duration-100`}
             >
-              <a href={`#${link.id}`}>{link.title}</a>
+              {link.title === 'LinkedIn'
+                ? <a href={`${link.id}`} target='_blank' rel="noreferrer">{link.title}</a>
+                : <a href={`#${link.id}`}>{link.title}</a>
+              }
             </li>
           ))}
+          <li className='text-secondary hover:text-white text-[18px] font-medium cursor-pointer transition ease-in duration-100'>
+            <a href={cv} download>CV</a>
+          </li>
         </ul>
 
         {/* Mobile navigation menu */}
@@ -61,9 +67,15 @@ const Navbar = () => {
                   setActive(link.title);
                 }}
               >
-                <a href={`#${link.id}`}>{link.title}</a>
+                {link.title === 'LinkedIn'
+                  ? <a href={`${link.id}`} target='_blank' rel="noreferrer">{link.title}</a>
+                  : <a href={`#${link.id}`}>{link.title}</a>
+                }
               </li>
             ))}
+            <li className='text-secondary font-poppins font-medium cursor-pointer text-[16px]'>
+              <a href={cv} download>CV</a>
+            </li>
             </ul>
           </div>
         </div>

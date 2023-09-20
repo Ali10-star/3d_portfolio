@@ -12,17 +12,22 @@ import {
   tailwind,
   nodejs,
   mongodb,
+  csharp,
+  dotnet,
   git,
   figma,
   docker,
-  meta,
+  mysql,
   starbucks,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
-  threejs,
+  a_star,
+  reactiveplayer,
+  carcat,
+  gaming,
+  sumz,
+  django,
+  postgres,
+  sass,
+  python
 } from "../assets";
 
 export const navLinks = [
@@ -37,6 +42,10 @@ export const navLinks = [
   {
     id: "contact",
     title: "Contact",
+  },
+  {
+    id: "https://www.linkedin.com/in/ali-arous/",
+    title: "LinkedIn",
   },
 ];
 
@@ -69,6 +78,10 @@ const technologies = [
     icon: css,
   },
   {
+    name: "Python",
+    icon: python,
+  },
+  {
     name: "JavaScript",
     icon: javascript,
   },
@@ -81,24 +94,32 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
     name: "Tailwind CSS",
     icon: tailwind,
   },
   {
-    name: "Node JS",
-    icon: nodejs,
+    name: "Django",
+    icon: django,
   },
   {
-    name: "MongoDB",
-    icon: mongodb,
+    name: "C#",
+    icon: csharp,
   },
   {
-    name: "Three JS",
-    icon: threejs,
+    name: ".NET",
+    icon: dotnet,
+  },
+  {
+    name: "PostgreSQL",
+    icon: postgres,
+  },
+  {
+    name: "MySQL",
+    icon: mysql,
+  },
+  {
+    name: "Sass",
+    icon: sass,
   },
   {
     name: "git",
@@ -109,62 +130,34 @@ const technologies = [
     icon: figma,
   },
   {
-    name: "docker",
-    icon: docker,
+    name: "Redux Toolkit",
+    icon: redux,
   },
 ];
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
+    title: ".NET Core Developer",
+    company_name: "Nimas Technology, Lebanon (Remotely)",
     icon: starbucks,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "June 2022 - May 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Planned, developed, tested, deployed, and maintained web applications.",
+      "Analyzed current and past company projects and improved an older project with modern features of .NET Core",
+      "Reduced the read times of queries from 0.35 seconds down to 0.3 seconds using query optimization techniques.",
+      "Worked on a microservices project. And applied coding best-practices and design patterns for improving the design of an older project.",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
+    title: "Fullstack Developer",
+    company_name: "Freelance",
+    icon: starbucks,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "June 2023 - ",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Currently working on personal projects and gaining valuable knowledge.",
+      "Primary tech used: React, Next.js, Django",
     ],
   },
 ];
@@ -198,16 +191,16 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Car Catalogue",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Web-based platform that allows users to search for different car models, with filtering capabilities.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "next.js",
         color: "green-text-gradient",
       },
       {
@@ -215,50 +208,137 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: carcat,
+    source_code_link: "https://github.com/Ali10-star/car-showcase-catalogue",
+    deploy_link: "https://car-showcase-catalogue.vercel.app",
   },
   {
-    name: "Job IT",
+    name: "Reactive Music Player",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Web-based music player app with a clean and minimal design.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
         name: "scss",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: reactiveplayer,
+    source_code_link: "https://github.com/Ali10-star/reactive-player",
+    deploy_link: "https://reactive-player.web.app/",
   },
   {
-    name: "Trip Guide",
+    name: "Ignite Gaming Catalogue",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Webapp for finding information about video games on different platforms with a modern design and searching functionality.",
     tags: [
       {
-        name: "nextjs",
+        name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "styled-components",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "redux-toolkit",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "api",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: gaming,
+    source_code_link: "https://github.com/Ali10-star/ignite-game-catalogue",
+    deploy_link: "https://ignite-game-catalogue.web.app/",
+  },
+  {
+    name: "Sumz AI Article Summarizer",
+    description:
+      "A simple frontend for an AI article summarizing tool, using ChatGPT-4 to give concise summaries of articles or webpages.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "green-text-gradient",
+      },
+      {
+        name: "openai-api",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: sumz,
+    source_code_link: "https://github.com/Ali10-star/AI-Article-Summarizer",
+    deploy_link: "https://ai-article-summarizer.web.app/",
+  },
+  {
+    name: "CPManager",
+    description:
+      "API for college graduation year project, built with .NET Core, for managing the process of creating teams, participating in the ICPC programming contests within the university.",
+    tags: [
+      {
+        name: ".NET-core",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "api",
+        color: "green-text-gradient",
+      },
+    ],
+    image: "https://placehold.co/600x400?text=CPManager",
+    source_code_link: "https://github.com/omar944/cpmanager",
+    deploy_link: "",
+  },
+  {
+    name: "Help Me Study",
+    description:
+      "API for college project, built with Django & the Django Rest Framework, for finding courses and tutors in many different topics, with a very simple recommendation system.",
+    tags: [
+      {
+        name: "api",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "django",
+        color: "green-text-gradient",
+      },
+      {
+        name: "django-rest-framework",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: "https://placehold.co/600x400?text=Help%20Me\nStudy",
+    source_code_link: "https://github.com/omar944/api-project",
+    deploy_link: "",
+  },
+  {
+    name: "A-Star Photo Editor",
+    description:
+      "Simple photo editing app for quick editing, mainly for applying filters. Includes functionality to extract a color palette from an image, display image tag data, and export in JPG or PNG format.",
+    tags: [
+      {
+        name: "python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tkinter",
+        color: "green-text-gradient",
+      },
+      {
+        name: "cross-platform",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: a_star,
+    source_code_link: "https://github.com/Ali10-star/A-Star-Photo-Editor",
+    deploy_link: "",
   },
 ];
 
