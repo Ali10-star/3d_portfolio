@@ -18,7 +18,7 @@ const ProjectCard = ({
   return (
     <div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <div className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'>
-        <div className='relative w-full h-[230px]'>
+        <div className='group relative w-full h-[230px] hover:grayscale hover:scale-95 transition-all ease-in duration-150'>
           <img
             src={image}
             alt='project_image'
