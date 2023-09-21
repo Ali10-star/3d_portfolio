@@ -15,6 +15,7 @@ import reactiveplayer from "./reactiveplayer.png";
 import gaming from "./gaming.png";
 import sumz from "./sumz.png";
 
+import heroImg from "./coder.png";
 import cv from "./Ali_Arous_CV_port.pdf";
 
 import css from "./tech/css.png";
@@ -92,4 +93,5 @@ export {
   gaming,
   mysql,
   cv,
+  heroImg,
 };

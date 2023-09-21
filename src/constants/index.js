@@ -18,7 +18,6 @@ import {
   figma,
   docker,
   mysql,
-  starbucks,
   a_star,
   reactiveplayer,
   carcat,
@@ -139,7 +138,7 @@ const experiences = [
   {
     title: ".NET Core Developer",
     company_name: "Nimas Technology, Lebanon (Remotely)",
-    icon: starbucks,
+    icon: "",
     iconBg: "#383E56",
     date: "June 2022 - May 2023",
     points: [
@@ -152,7 +151,7 @@ const experiences = [
   {
     title: "Fullstack Developer",
     company_name: "Freelance",
-    icon: starbucks,
+    icon: "",
     iconBg: "#383E56",
     date: "June 2023 - ",
     points: [

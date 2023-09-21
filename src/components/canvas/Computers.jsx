@@ -4,6 +4,7 @@ import { Suspense, useEffect, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import Loader from '../Loader';
+import { heroImg } from '../../assets';
 
 // eslint-disable-next-line react/prop-types
 const Computers = ({ isMobile }) => {
@@ -50,22 +51,25 @@ const ComputerCanvas = () => {
   }, []);
 
   return (
-    <Canvas
-      frameloop='demand'
-      shadows
-      camera={{ position: [20, 3, 5], fov: 25 }}
-      gl={{ preserveDrawingBuffer: true }}
-    >
-      <Suspense fallback={<Loader />}>
-        <OrbitControls
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2} // stops rotation after certain angle
-          minPolarAngle={Math.PI / 2}
-        />
-        <Computers isMobile={isMobile}/>
-      </Suspense>
-      <Preload all />
-    </Canvas>
+    <div className=' relative top-[10rem] mx-36 flex justify-end'>
+      <img src={heroImg} alt="coding" className='h-[26rem] w-[32rem]'/>
+    </div>
+    // <Canvas
+    //   frameloop='demand'
+    //   shadows
+    //   camera={{ position: [20, 3, 5], fov: 25 }}
+    //   gl={{ preserveDrawingBuffer: true }}
+    // >
+    //   <Suspense fallback={<Loader />}>
+    //     <OrbitControls
+    //       enableZoom={false}
+    //       maxPolarAngle={Math.PI / 2} // stops rotation after certain angle
+    //       minPolarAngle={Math.PI / 2}
+    //     />
+    //     <Computers isMobile={isMobile}/>
+    //   </Suspense>
+    //   <Preload all />
+    // </Canvas>
   )
 }
 
