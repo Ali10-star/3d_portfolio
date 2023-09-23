@@ -6,6 +6,8 @@ import { styles } from "./styles";
 import { textVariant } from "./utils/motion";
 
 const App = () => {
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-primary">
@@ -22,7 +24,7 @@ const App = () => {
         <Works />
         <div className="relative z-0">
           <Contact />
-          <StarsCanvas />
+          {!isMobile && <StarsCanvas />}
         </div>
       </div>
     </BrowserRouter>

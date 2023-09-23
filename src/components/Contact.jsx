@@ -10,6 +10,7 @@ const Contact = () => {
     subject: '',
     message: ''
   });
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -35,7 +36,6 @@ const Contact = () => {
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
       <div
-        // variants={slideIn("left", "tween", 0.2, 1)}
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
       >
         <p className={`${styles.heroSubText}`}>Get in touch</p>
@@ -92,12 +92,15 @@ const Contact = () => {
           </button>
         </form>
       </div>
-      <div
-        // variants={slideIn("right", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
-      >
-        <EarthCanvas />
-      </div>
+
+      {!isMobile &&
+        <div
+          // variants={slideIn("right", "tween", 0.2, 1)}
+          className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+        >
+          <EarthCanvas />
+        </div>
+      }
     </div>
   )
 }
