@@ -38,6 +38,7 @@ import django from "./tech/django.png";
 import dotnet from "./tech/dotnet.png";
 import csharp from "./tech/csharp.png";
 import mysql from "./tech/mysql.png";
+import nextjs from './tech/nextjs.svg';
 
 
 import meta from "./company/meta.png";
@@ -94,4 +95,5 @@ export {
   mysql,
   cv,
   heroImg,
+  nextjs,
 };
